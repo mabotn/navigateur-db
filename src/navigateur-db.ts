@@ -1,15 +1,16 @@
+1/* eslint-disable @typescript-eslint/no-explicit-any  */
 import {
     ICollection,
     INavigateurDB
 } from './interfaces'
 
 const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
-    let request = window.indexedDB.open(dbName, Date.now())
+    const request = window.indexedDB.open(dbName, Date.now())
     let db: IDBDatabase = null
 
     function Guid() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
     }
@@ -21,17 +22,17 @@ const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
         }
     }
 
-    let collection: ICollection = {
+    const collection: ICollection = {
         Find: function (filters, options, callback) {
             return new Promise(function (resolve, reject) {
-                let query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).getAll()
+                const query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).getAll()
 
                 errorHandler(query, reject, callback)
                 query.onsuccess = function (event: any) {
-                    let filterKeys = Object.keys(filters)
+                    const filterKeys = Object.keys(filters)
                     let result = Array.isArray(event.target.result) && event.target.result.filter((row => {
                         if (filterKeys.length > 0) {
-                            let isMatch = filterKeys.filter(key => {
+                            const isMatch = filterKeys.filter(key => {
                                 if (options.caseInsensitive) {
                                     if (!options.equalMatch) {
                                         return String(row[key]).toLocaleLowerCase().indexOf(String(filters[key]).toLocaleLowerCase()) != -1
@@ -63,12 +64,12 @@ const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
         },
         Insert: function (data, callback) {
             return new Promise(function (resolve, reject) {
-                let result = {
+                const result = {
                     id: Guid(),
                     ...data
                 }
 
-                let query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).add(result)
+                const query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).add(result)
 
                 errorHandler(query, reject, callback)
                 query.onsuccess = function () {
@@ -82,7 +83,7 @@ const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
                 if (!('id' in data)) {
                     reject(new Error("id is a mandatory field"))
                 } else {
-                    let query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).put(data)
+                    const query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).put(data)
 
                     errorHandler(query, reject, callback)
                     query.onsuccess = function () {
@@ -94,7 +95,7 @@ const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
         },
         Delete: function (id, callback) {
             return new Promise(function (resolve, reject) {
-                let query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).delete(id)
+                const query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).delete(id)
 
                 errorHandler(query, reject, callback)
                 query.onsuccess = function (event: any) {
@@ -112,7 +113,7 @@ const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
         }
 
         request.onupgradeneeded = function (event: any) {
-            let upgradeDb: IDBDatabase = event.target.result
+            const upgradeDb: IDBDatabase = event.target.result
             if (!upgradeDb.objectStoreNames.contains(collectionName)) {
                 upgradeDb.createObjectStore(collectionName, { keyPath: 'id' })
             }
