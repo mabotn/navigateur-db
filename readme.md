@@ -2,7 +2,7 @@ A JavaScript library that simplifies the implementation of indexedDB
 
 # Status
 
-BrowserDB is currently an experimental project
+NavigateurDB is currently an experimental project
 
 # Example
 
@@ -13,9 +13,9 @@ Call the `Database` function and specify both database and collection names
 The `Find`, `Insert`, `Update` and `Delete` functions support both callbacks and promises
 
 ```javascript
-import BrowserDB from 'browser-db'
+import NavigateurDB from 'navigateur-db'
 
-BrowserDB("my-db", "people").then(async (db) => {
+NavigateurDB("my-db", "people").then(async (db) => {
     let data = {
         firstName: "Mohamed Anas",
         lastName: "Ben Othman",
@@ -34,7 +34,7 @@ BrowserDB("my-db", "people").then(async (db) => {
 
 # License
 
-BrowserDB is freely distributable under the terms of the [MIT license](https://github.com/mabotn/browser-db/blob/HEAD/LICENSE)
+NavigateurDB is freely distributable under the terms of the [MIT license](https://github.com/mabotn/navigateur-db/blob/HEAD/LICENSE)
 
 # Contributors
 

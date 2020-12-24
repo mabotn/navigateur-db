@@ -29,7 +29,7 @@ interface ICollection {
     Delete: IDelete
 }
 
-interface IBrowserDB {
+interface INavigateurDB {
     (dbName: string, collectionName: string, cb?: ICallback<any>): Promise<ICollection>
 }
 
@@ -40,5 +40,5 @@ export {
     IUpdate,
     IDelete,
     ICollection,
-    IBrowserDB
+    INavigateurDB
 }

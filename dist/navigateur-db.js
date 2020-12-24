@@ -10,8 +10,8 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var BrowserDB = function (dbName, collectionName, cb) {
+exports.__esModule = true;
+var NavigateurDB = function (dbName, collectionName, cb) {
     var request = window.indexedDB.open(dbName, Date.now());
     var db = null;
     function Guid() {
@@ -103,7 +103,7 @@ var BrowserDB = function (dbName, collectionName, cb) {
         },
         Delete: function (id, callback) {
             return new Promise(function (resolve, reject) {
-                var query = db.transaction([collectionName], 'readwrite').objectStore(collectionName).delete(id);
+                var query = db.transaction([collectionName], 'readwrite').objectStore(collectionName)["delete"](id);
                 errorHandler(query, reject, callback);
                 query.onsuccess = function (event) {
                     if (callback) {
@@ -142,5 +142,5 @@ var BrowserDB = function (dbName, collectionName, cb) {
         };
     });
 };
-exports.default = BrowserDB;
-//# sourceMappingURL=browser-db.js.map
+exports["default"] = NavigateurDB;
+//# sourceMappingURL=navigateur-db.js.map

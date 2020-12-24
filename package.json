@@ -1,8 +1,8 @@
 {
-  "name": "browser-db",
+  "name": "navigateur-db",
   "version": "1.0.0",
   "description": "A JavaScript library that simplifies the implementation of indexedDB",
-  "main": "dist/browser-db.js",
+  "main": "dist/navigateur-db.js",
   "directories": {
     "example": "example"
   },
@@ -11,9 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mabotn/browser-db.git"
+    "url": "git+https://github.com/mabotn/navigateur-db.git"
   },
   "keywords": [
+    "nosql",
     "database",
     "browser",
     "indexeddb"
@@ -24,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mabotn/browser-db/issues"
+    "url": "https://github.com/mabotn/navigateur-db/issues"
   },
-  "homepage": "https://github.com/mabotn/browser-db#readme",
+  "homepage": "https://github.com/mabotn/navigateur-db#readme",
   "dependencies": {
     "typescript": "^4.1.3"
   }

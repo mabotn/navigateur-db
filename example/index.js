@@ -1,6 +1,6 @@
-import BrowserDB from '../dist/browser-db'
+import NavigateurDB from '../dist/navigateur-db'
 
-BrowserDB("my-db", "people").then(async (db) => {
+NavigateurDB("my-db", "people").then(async (db) => {
     let data = {
         firstName: "Mohamed Anas",
         lastName: "Ben Othman",

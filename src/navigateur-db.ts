@@ -1,9 +1,9 @@
 import {
     ICollection,
-    IBrowserDB
+    INavigateurDB
 } from './interfaces'
 
-const BrowserDB: IBrowserDB = function (dbName, collectionName, cb) {
+const NavigateurDB: INavigateurDB = function (dbName, collectionName, cb) {
     let request = window.indexedDB.open(dbName, Date.now())
     let db: IDBDatabase = null
 
@@ -132,4 +132,4 @@ const BrowserDB: IBrowserDB = function (dbName, collectionName, cb) {
     })
 }
 
-export default BrowserDB
+export default NavigateurDB
