@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "composite": true,
+        "declarationDir": "typings",
+        "rootDir": "./src",
+        "sourceMap": true,
+        "lib": [
+            "DOM",
+            "ES2015"
+        ]
+    },
+}

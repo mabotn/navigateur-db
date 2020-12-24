@@ -1,0 +1,33 @@
+{
+  "name": "browser-db",
+  "version": "1.0.0",
+  "description": "A JavaScript library that simplifies the implementation of indexedDB",
+  "main": "dist/browser-db.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabotn/browser-db.git"
+  },
+  "keywords": [
+    "database",
+    "browser",
+    "indexeddb"
+  ],
+  "author": {
+    "name": "Mohamed Anas Ben Othman",
+    "email": "mabo.tn@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mabotn/browser-db/issues"
+  },
+  "homepage": "https://github.com/mabotn/browser-db#readme",
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
