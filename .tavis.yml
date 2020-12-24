@@ -1,0 +1,23 @@
+language: node_js
+os: linux
+cache: 
+  - directories:
+    - node_modules
+node_js:
+- '12'
+stages:
+  - install
+  - lint
+  - test
+  - name: deploy
+    if: branch = main
+jobs:
+  include:
+    - stage: install
+      script: npm ci
+    - stage: lint
+      script: npm run lint-check
+    - stage: test
+      script: npm test
+    - stage: deploy
+      script: echo "Not set yet"
