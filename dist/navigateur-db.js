@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
+1; /* eslint-disable @typescript-eslint/no-explicit-any  */
 var NavigateurDB = function (dbName, collectionName, cb) {
     var request = window.indexedDB.open(dbName, Date.now());
     var db = null;
