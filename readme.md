@@ -41,4 +41,4 @@ NavigateurDB is freely distributable under the terms of the [MIT license](https:
 # Contributors
 
 * [Mohamed Anas Ben Othman](mailto:mabo.tn@outlook.com)
-* [Nsiri Abdennacer](mailto:fixme)
+* [Nsiri Abdennacer](mailto:nnacir1938@hotmail.com)
