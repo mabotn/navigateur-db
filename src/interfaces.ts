@@ -1,8 +1,11 @@
+/* eslint-disable */
 interface ICallback<T> {
     (err, result: T): Function
 }
 
+
 interface IFind {
+
     (filters: any, options: {
         caseInsensitive: boolean
         equalMatch: boolean
