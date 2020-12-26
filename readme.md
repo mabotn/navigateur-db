@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/naciriii/navigateur-db.svg?branch=main)](https://travis-ci.org/naciriii/navigateur-db)
+
 A JavaScript library that simplifies the implementation of indexedDB
 
 # Status
