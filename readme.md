@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/naciriii/navigateur-db.svg?branch=main)](https://travis-ci.org/naciriii/navigateur-db)
+[![Build Status](https://www.travis-ci.com/naciriii/navigateur-db.svg?branch=main)](https://www.travis-ci.com/naciriii/navigateur-db)
 
 A JavaScript library that simplifies the implementation of indexedDB
 
